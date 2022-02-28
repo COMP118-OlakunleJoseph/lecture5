@@ -20,19 +20,15 @@ using namespace std;
  * @return Returns 0 if success, any other value otherwise.
  */
 int main() {
-	int targetNum = 4,
-		product = 0;
+	int targetNum, product = 1;
 
 	cout << "Enter a number: ";
 	cin >> targetNum;
 
-	for (int i = 1; i <= 5; ++i)
+	for (int i = 1; i <= targetNum; i++)
 		product *= i;
 
 	cout << "\nProduct of numbers from 1 to " << targetNum << " is: " << product << endl;
-
-	getchar();
-	getchar();
 
 	return 0;
 }
