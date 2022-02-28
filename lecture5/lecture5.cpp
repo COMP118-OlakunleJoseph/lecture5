@@ -20,12 +20,14 @@ using namespace std;
  * @return Returns 0 if success, any other value otherwise.
  */
 int main() {
-	int targetNum, product = 1;
+	int targetNum = 0, product = 1;
 
-	cout << "Enter a number: ";
-	cin >> targetNum;
+	do {
+		cout << "Enter a number (>0): ";
+		cin >> targetNum;
+	} while (targetNum < 1);
 
-	for (int i = 1; i <= targetNum; i++)
+	for (int i = 1; i <= targetNum; ++i)
 		product *= i;
 
 	cout << "\nProduct of numbers from 1 to " << targetNum << " is: " << product << endl;
